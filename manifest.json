@@ -1,8 +1,8 @@
 {
   "name": "svelte-app",
   "short_name": "svelte-app",
-  "scope": "/svelte-template/",
-  "start_url": "/svelte-template/index.html",
+  "scope": "/",
+  "start_url": "/index.html",
   "background_color": "#ffffff",
   "theme_color": "#000000",
   "display": "minimal-ui",
