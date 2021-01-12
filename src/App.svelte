@@ -1,5 +1,6 @@
 <script>
   export let name;
+  export let version;
 </script>
 
 <main>
@@ -10,6 +11,7 @@
     to learn how to build Svelte apps.
   </p>
 </main>
+<footer>Version: {version}</footer>
 
 <style>
   main {
@@ -24,6 +26,16 @@
     text-transform: uppercase;
     font-size: 4em;
     font-weight: 100;
+  }
+
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: grey;
+    color: white;
+    text-align: center;
   }
 
   @media (min-width: 640px) {

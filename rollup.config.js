@@ -1,4 +1,5 @@
 import commonjs from "@rollup/plugin-commonjs";
+import json from '@rollup/plugin-json';
 import livereload from "rollup-plugin-livereload";
 import postcss from "rollup-plugin-postcss";
 import resolve from "@rollup/plugin-node-resolve";
@@ -8,7 +9,7 @@ import { terser } from "rollup-plugin-terser";
 const production = !process.env.ROLLUP_WATCH;
 const baseUrl = production ? require("./package.json").baseUrl : "";
 
-export default { 
+export default {
   input: "src/main.js",
   output: {
     sourcemap: true,
@@ -39,6 +40,7 @@ export default {
       dedupe: ["svelte"]
     }),
     commonjs(),
+    json(),
 
     // Generate index.html and manifest.json for production build
 
