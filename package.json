@@ -26,5 +26,5 @@
   "dependencies": {
     "sirv-cli": "^1.0.10"
   },
-  "baseUrl": ""
+  "baseUrl": "svelte-template"
 }
