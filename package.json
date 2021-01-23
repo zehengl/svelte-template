@@ -17,7 +17,7 @@
     "postcss": "^8.2.4",
     "prettier": "^2.2.1",
     "prettier-plugin-svelte": "^2.1.1",
-    "rollup": "^2.37.1",
+    "rollup": "^2.38.0",
     "rollup-plugin-livereload": "^2.0.0",
     "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-svelte": "^7.1.0",
