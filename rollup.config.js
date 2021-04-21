@@ -7,7 +7,7 @@ import svelte from "rollup-plugin-svelte";
 import { terser } from "rollup-plugin-terser";
 
 const production = !process.env.ROLLUP_WATCH;
-const baseUrl = production ? require("./package.json").baseUrl : "";
+const baseUrl = production ? process.env.BASE_URL : "";
 
 export default {
   input: "src/main.js",
