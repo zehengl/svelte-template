@@ -3,44 +3,22 @@
   export let version;
 </script>
 
-<main>
-  <h1>Hello {name}!</h1>
-  <p>
-    Visit the
-    <a href="https://svelte.dev/tutorial">Svelte tutorial</a>
-    to learn how to build Svelte apps.
-  </p>
-</main>
-<footer>Version: {version}</footer>
+<div class="flex flex-col h-screen justify-between">
+  <main class="mb-auto">
+    <h1 class="text-5xl text-center text-indigo-700 py-8">Hello {name}!</h1>
+    <p class="text-2xl text-center py-2">
+      Visit the
+      <a href="https://svelte.dev/tutorial">Svelte tutorial</a>
+      to learn how to build Svelte apps.
+    </p>
+  </main>
+  <footer class="h-10 bg-gray-300">
+    <p class="text-center">Version: {version}</p>
+  </footer>
+</div>
 
-<style>
-  main {
-    text-align: center;
-    padding: 1em;
-    max-width: 240px;
-    margin: 0 auto;
-  }
-
-  h1 {
-    color: #ff3e00;
-    text-transform: uppercase;
-    font-size: 4em;
-    font-weight: 100;
-  }
-
-  footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: grey;
-    color: white;
-    text-align: center;
-  }
-
-  @media (min-width: 640px) {
-    main {
-      max-width: none;
-    }
-  }
+<style global lang="postcss">
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
 </style>

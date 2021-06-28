@@ -1,5 +1,5 @@
 import commonjs from "@rollup/plugin-commonjs";
-import json from '@rollup/plugin-json';
+import json from "@rollup/plugin-json";
 import livereload from "rollup-plugin-livereload";
 import postcss from "rollup-plugin-postcss";
 import resolve from "@rollup/plugin-node-resolve";
@@ -15,19 +15,20 @@ export default {
     sourcemap: true,
     format: "iife",
     name: "app",
-    file: "public/build/bundle.js"
+    file: "public/build/bundle.js",
   },
   plugins: [
     svelte({
       // enable run-time checks when not in production
       dev: !production,
-      emitCss: true
+      emitCss: true,
     }),
 
     postcss({
       extract: true,
       minimize: production,
-      sourceMap: !production
+      sourceMap: !production,
+      plugins: [require("tailwindcss"), require("autoprefixer")],
     }),
 
     // If you have external dependencies installed from
@@ -37,7 +38,7 @@ export default {
     // https://github.com/rollup/plugins/tree/master/packages/commonjs
     resolve({
       browser: true,
-      dedupe: ["svelte"]
+      dedupe: ["svelte"],
     }),
     commonjs(),
     json(),
@@ -47,12 +48,12 @@ export default {
     template({
       templatePath: "src/templates/index.html",
       baseUrl: baseUrl,
-      outputPath: "public/index.html"
+      outputPath: "public/index.html",
     }),
     template({
       templatePath: "src/templates/manifest.json",
       baseUrl: baseUrl,
-      outputPath: "public/manifest.json"
+      outputPath: "public/manifest.json",
     }),
 
     // In dev mode, call `npm run start` once
@@ -65,11 +66,11 @@ export default {
 
     // If we're building for production (npm run build
     // instead of npm run dev), minify
-    production && terser()
+    production && terser(),
   ],
   watch: {
-    clearScreen: false
-  }
+    clearScreen: false,
+  },
 };
 
 function serve() {
@@ -82,10 +83,10 @@ function serve() {
 
         require("child_process").spawn("npm", ["run", "start", "--", "--dev"], {
           stdio: ["ignore", "inherit", "inherit"],
-          shell: true
+          shell: true,
         });
       }
-    }
+    },
   };
 }
 
