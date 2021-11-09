@@ -22,7 +22,7 @@ jobs:
         env:
           BASE_URL: svelte-template
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.4
+        uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           BRANCH: gh-pages
           FOLDER: public
