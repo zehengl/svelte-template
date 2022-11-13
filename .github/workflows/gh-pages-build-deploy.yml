@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v2.3.1
+        uses: actions/checkout@v2
         with:
           persist-credentials: false
       - name: Setup Node.js ✨
@@ -22,7 +22,7 @@ jobs:
         env:
           BASE_URL: svelte-template
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.5
+        uses: JamesIves/github-pages-deploy-action@v3
         with:
           BRANCH: gh-pages
           FOLDER: public
