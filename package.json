@@ -15,7 +15,7 @@
     "eslint": "^8.49.0",
     "eslint-plugin-svelte3": "^4.0.0",
     "gh-pages": "^5.0.0",
-    "postcss": "^8.4.29",
+    "postcss": "^8.4.30",
     "prettier": "^2.8.8",
     "prettier-plugin-svelte": "^2.10.1",
     "rollup": "^2.79.1",
