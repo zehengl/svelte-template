@@ -12,7 +12,7 @@
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^14.1.0",
     "autoprefixer": "^10.4.16",
-    "eslint": "^8.50.0",
+    "eslint": "^8.52.0",
     "eslint-plugin-svelte3": "^4.0.0",
     "postcss": "^8.4.31",
     "prettier": "^2.8.8",
