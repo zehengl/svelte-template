@@ -14,7 +14,7 @@
     "autoprefixer": "^10.4.20",
     "eslint": "^8.57.0",
     "eslint-plugin-svelte3": "^4.0.0",
-    "postcss": "^8.4.41",
+    "postcss": "^8.4.44",
     "prettier": "^2.8.8",
     "prettier-plugin-svelte": "^2.10.1",
     "rollup": "^2.79.1",
